@@ -67,18 +67,18 @@ Unlike traditional solvers with handcrafted heuristics, this approach learns the
 
 | Model         | Beam Width | Avg. Solution Length | Success Rate |
 | :------------ | :--------: | :------------------: | :----------: |
-| Residual MLP  | $2^{14}$   | 19.49                | 100%         |
-| Embedding MLP | $2^{14}$   | 19.30                | 100%         |
-| Transformer   | $2^{14}$   | 20.02                | 99.5%        |
-| Rank Model    | $2^{14}$   | 21.33                | 98.75%       |
+| Residual MLP  | 2^14       | 19.49                | 100%         |
+| Embedding MLP | 2^14       | 19.30                | 100%         |
+| Transformer   | 2^14       | 20.02                | 99.5%        |
+| Rank Model    | 2^14       | 21.33                | 98.75%       |
 
 ### Dataset: [Kaggle Santa 2023 Challenge](https://www.kaggle.com/competitions/santa-2023)
 
 | Method                                            | Beam Width | # Agents | Dataset Size | Avg. Solution Length | Success Rate |
 | :------------------------------------------------ | :--------: | :------: | :----------: | :------------------: | :----------: |
-| [Previous Best](https://arxiv.org/pdf/2502.13266) | $2^{24}$   | 1        | 8 Billion    | 19.51                | 100%         |
-| **This Project**                                  | $2^{16}$   | 1        | 2 Billion    | **18.72**            | 100%         |
-| **This Project**                                  | $2^{15}$   | 7        | 2 Billion    | **18.57**            | 100%         |
+| [Previous Best](https://arxiv.org/pdf/2502.13266) | 2^24       | 1        | 8 Billion    | 19.51                | 100%         |
+| **This Project**                                  | 2^16       | 1        | 2 Billion    | **18.72**            | 100%         |
+| **This Project**                                  | 2^15       | 7        | 2 Billion    | **18.57**            | 100%         |
 
 ---
 
