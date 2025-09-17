@@ -21,12 +21,12 @@ Unlike traditional solvers with handcrafted heuristics, this approach learns the
 
 ## ⚙️ Technical Details
 
-### Training Data
+### 📊 Training Data
 - Random walks performed outward from the solved state
 - Mean distance-to-solved state recorded for each scrambled state reached
 - 2 Billion training samples generated
 
-### Models
+### 📈 Models
 - **MLP with Residual Connections**
     - Input: One-hot encoded cube state
     - Output: Predicted distance-to-solved
@@ -54,23 +54,23 @@ Unlike traditional solvers with handcrafted heuristics, this approach learns the
     - Optimizer: AdamW
     - LR Schedule: Cosine Annealing
 
-### Search
+### 🔎 Search
 - Algorithm: **Beam Search**  
 - Beam width: 2^11 to 2^15
 - Termination: Solved state reached *OR* 50 iterations
 
 ---
 
-## 📊 Results
+## 🏆 Results
 
 ### Dataset: 400 random scrambled states
 
-| Model         | Avg. Solution Length | Success Rate |
-| :------------ | :------------------: | :----------: |
-| Residual MLP  | 19.49                | 100%         |
-| Embedding MLP | 19.28                | 100%         |
-| Transformer   | 20.02                | 99.5%        |
-| Rank Model    | 21.33                | 98.75%       |
+| Model         | Beam Size | Avg. Solution Length | Success Rate |
+| :------------ | :-------: | :------------------: | :----------: |
+| Residual MLP  | 2^14      | 19.49                | 100%         |
+| Embedding MLP | 2^14      | 19.30                | 100%         |
+| Transformer   | 2^14      | 20.02                | 99.5%        |
+| Rank Model    | 2^14      | 21.33                | 98.75%       |
 
 ### Dataset: [Kaggle Santa 2023 Challenge](https://www.kaggle.com/competitions/santa-2023)
 
