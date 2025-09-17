@@ -27,27 +27,27 @@ Unlike traditional solvers with handcrafted heuristics, this approach learns the
 - 2 Billion training samples generated
 
 ### Models
-- MLP with Residual Connections
+- **MLP with Residual Connections**
     - Input: One-hot encoded cube state
     - Output: Predicted distance-to-solved
     - Loss: Smooth L1 Loss
     - Optimizer: AdamW
     - LR Schedule: Cosine Annealing
-- Embedding MLP
+- **Embedding MLP**
     - Embeds each cube facet with a learnable embedding
     - Input: Categorized cube facets
     - Output: Predicted distance-to-solved
     - Loss: Smooth L1 Loss
     - Optimizer: AdamW
     - LR Schedule: Cosine Annealing
-- Transformer
+- **Transformer**
     - Transformer model for tabular data
     - Inputs embedded into tokens and passed through transformer blocks
     - Output: Predicted distance-to-solved
     - Loss: Smooth L1 Loss
     - Optimizer: AdamW
     - LR Schedule: Cosine Annealing
-- Rank Model
+- **Rank Model**
     - Embeds cubes in a dense embedding space using residual SwiGLU blocks and an MLP Encoder
     - Margin Rank Loss relates distances in training data to cosine similarity in embedding space
     - Output: Distance-to-solved in embedding  space
@@ -56,7 +56,7 @@ Unlike traditional solvers with handcrafted heuristics, this approach learns the
 
 ### Search
 - Algorithm: **Beam Search**  
-- Beam width: 2^11 to 2^14
+- Beam width: 2^11 to 2^15
 - Termination: Solved state reached *OR* 50 iterations
 
 ---
@@ -66,7 +66,7 @@ Unlike traditional solvers with handcrafted heuristics, this approach learns the
 ### Dataset: 400 random scrambled states
 
 | Model         | Avg. Solution Length | Success Rate |
-| ------------- | -------------------- | ------------ |
+| :------------ | :------------------: | :----------: |
 | Residual MLP  | 19.49                | 100%         |
 | Embedding MLP | 19.28                | 100%         |
 | Transformer   | 20.02                | 99.5%        |
@@ -75,13 +75,13 @@ Unlike traditional solvers with handcrafted heuristics, this approach learns the
 ### Dataset: [Kaggle Santa 2023 Challenge](https://www.kaggle.com/competitions/santa-2023)
 
 | Method                                            | Beam Size | # Agents | Dataset Size | Avg. Solution Length | Success Rate |
-| ------------------------------------------------- | --------- | -------- | ------------ | -------------------- | ------------ |
-| [Previous Best](https://arxiv.org/pdf/2502.13266) | 2^24      | 1        | 8 Billion    | 19.512               | 100%         |
-| **This Project**                                  | 2^15      | 1        | 2 Billion    |                      | 100%         |
-| **This Project**                                  | 2^15      | 7        | 2 Billion    |                      | 100%         |
+| :------------------------------------------------ | :-------: | :------: | :----------: | :------------------: | :----------: |
+| [Previous Best](https://arxiv.org/pdf/2502.13266) | 2^24      | 1        | 8 Billion    | 19.51                | 100%         |
+| **This Project**                                  | 2^15      | 1        | 2 Billion    | 19.13                | 100%         |
+| **This Project**                                  | 2^14      | 7        | 2 Billion    | 18.85                | 100%         |
 
 ---
 
 ## 📜 License
 
-MIT License. See [LICENSE](LICENSE) for details.
+[MIT License](LICENSE)
