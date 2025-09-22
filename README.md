@@ -77,8 +77,8 @@ Unlike traditional solvers with handcrafted heuristics, this approach learns the
 | Method                                            | Beam Width | # Agents | Dataset Size | Avg. Solution Length | Success Rate |
 | :------------------------------------------------ | :--------: | :------: | :----------: | :------------------: | :----------: |
 | [Previous Best](https://arxiv.org/pdf/2502.13266) | 2^24       | 1        | 8 Billion    | 19.51                | 100%         |
-| **This Project**                                  | 2^16       | 1        | 2 Billion    | **18.72**            | 100%         |
-| **This Project**                                  | 2^15       | 7        | 2 Billion    | **18.57**            | 100%         |
+| **This Project**                                  | 2^17       | 1        | 2 Billion    | **18.49**            | 100%         |
+| **This Project**                                  | 2^16       | 7        | 2 Billion    | **18.32**            | 100%         |
 
 ---
 
