@@ -69,7 +69,7 @@ Unlike traditional solvers with handcrafted heuristics, this approach learns the
 | :------------ | :--------: | :------------------: | :----------: |
 | Residual MLP  | 2^14       | 19.49                | 100%         |
 | Embedding MLP | 2^14       | 19.30                | 100%         |
-| Transformer   | 2^14       | 20.02                | 99.5%        |
+| Transformer   | 2^14       | 20.02                | 99.50%        |
 | Rank Model    | 2^14       | 21.33                | 98.75%       |
 
 ### Dataset: [Kaggle Santa 2023 Challenge](https://www.kaggle.com/competitions/santa-2023)
